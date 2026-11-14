@@ -1,9 +1,9 @@
-from fc.api import FC26_API
+from integrations.fc.api import FC26_API
 
 api = FC26_API()
 
 # Search returns the single best match as a one-row DataFrame
-club = api.search_club_by_name("kcanton")
+club = api.search_club_by_name("KCANTON")
 if club is None:
     raise SystemExit("search failed")
 if club.empty:
